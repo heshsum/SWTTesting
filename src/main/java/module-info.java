@@ -3,4 +3,5 @@ module org.pareto {
     opens org.pareto.testing;
     opens org.pareto.calculator;
     opens org.pareto.honorar;
+    opens org.pareto.mocking;
 }
