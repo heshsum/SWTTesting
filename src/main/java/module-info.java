@@ -1,5 +1,6 @@
 module org.pareto {
     requires java.xml;
     opens org.pareto.testing;
-    opens org.pareto.praesenz2;
+    opens org.pareto.calculator;
+    opens org.pareto.honorar;
 }
