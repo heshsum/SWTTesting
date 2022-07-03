@@ -36,7 +36,6 @@
     </dependency>
   </dependencies>
   <build>
-    <pluginManagement>
       <plugins>
         <plugin>
           <groupId>org.sonarsource.scanner.maven</groupId>
@@ -85,6 +84,5 @@
           <version>2.22.2</version>
         </plugin>
       </plugins>
-    </pluginManagement>
   </build>
 </project>
