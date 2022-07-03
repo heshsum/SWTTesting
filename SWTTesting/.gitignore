@@ -1,0 +1,11 @@
+.idea
+.DS_Store
+*.class
+*.jar
+*.exec
+target/**/*.html
+target/**/*.gif
+target/*/
+target/site/jacoco/jacoco-resources
+jacoco.csv
+!target/site/
