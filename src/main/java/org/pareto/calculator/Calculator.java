@@ -1,4 +1,4 @@
-package org.pareto.praesenz2;
+package org.pareto.calculator;
 
 /**
  * A simple calculator.

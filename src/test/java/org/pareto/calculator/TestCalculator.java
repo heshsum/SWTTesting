@@ -1,4 +1,4 @@
-package org.pareto.praesenz2;
+package org.pareto.calculator;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
