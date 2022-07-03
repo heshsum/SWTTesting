@@ -39,4 +39,10 @@ class TestCalcHonorar {
         s.append(li.repeat(10));
         Assertions.assertEquals(8, ch.getHonorar(s.toString()));
     }
+
+    @Test
+    void bildHonorarBerechnung() {
+        String s = "Ein Mann Bild sitzt in seinem Garten Bild.";
+        Assertions.assertEquals(2, ch.countPictures(s));
+    }
 }

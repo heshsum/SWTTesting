@@ -25,6 +25,6 @@ public class CalcHonorar {
      * @return die Anzahl wie oft die Zeichenfolge "Bild" in dem Text vorkommt
      */
     public int countPictures(String s) {
-        return s.split("Bild").length;
+        return s.split("Bild").length-1;
     }
 }
