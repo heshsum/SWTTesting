@@ -6,12 +6,9 @@ import org.junit.jupiter.api.Test;
 import static org.mockito.Mockito.*;
 
 class TestMocking {
-
-    Aktie a;
     Depot d;
     Aktie apple;
     Aktie bayer;
-    Ticker ticker;
 
     @BeforeEach
     void setup() {
@@ -27,8 +24,20 @@ class TestMocking {
     }
 
     @Test
+    void testGetAktie() {
+        d.addAktie(apple);
+        Assertions.assertEquals(apple, d.getAktie(0));
+    }
+
+    @Test
+    void testGetTicker() {
+        Ticker mockTicker = mock(Ticker.class);
+        d.setTicker(mockTicker);
+        Assertions.assertEquals(mockTicker, d.getTicker());
+    }
+
+    @Test
     void testTicker() {
-        Aktie a = new Aktie("EINS", "Eins AG", 1);
         d.addAktie(apple);
         d.addAktie(bayer);
 
@@ -38,6 +47,25 @@ class TestMocking {
         d.setTicker(mockTicker);
 
         Assertions.assertEquals(555.55, d.getDepotwert());
+    }
+
+    @Test
+    void getName() {
+        Assertions.assertEquals("Apple", apple.getName());
+    }
+
+    @Test
+    void getSymbol() {
+        Assertions.assertEquals("AAPL", apple.getSymbol());
+        apple.setSymbol("APPL");
+        Assertions.assertEquals("APPL", apple.getSymbol());
+    }
+
+    @Test
+    void testAnzahl() {
+        Assertions.assertEquals(2, apple.getAnzahl());
+        apple.setAnzahl(1);
+        Assertions.assertEquals(1, apple.getAnzahl());
     }
 
 }
