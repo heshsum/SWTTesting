@@ -213,33 +213,6 @@ public class Book {
     }
 
     /**
-     * Returns a complete textual representation of all attributes set for a Book.
-     *
-     * @return the author and the title of the Book
-     */
-    public String getAllSet() {
-        StringBuilder returnString = new StringBuilder();
-        returnString.append("Author: ").append(this.author).append(System.lineSeparator())
-                .append("Title: ").append(this.title).append(System.lineSeparator());
-
-        if (this.publisher != null) {
-            returnString.append("Publisher: ").append(this.publisher).append(System.lineSeparator());
-        }
-        if (this.year != -1) {
-            returnString.append("Year: ").append(this.year).append(System.lineSeparator());
-        }
-        if (this.isbn != null) {
-            returnString.append("ISBN: ").append(this.isbn).append(System.lineSeparator());
-        }
-        if (this.price != -1.0) {
-            returnString.append("Price: ").append(this.price).append(System.lineSeparator());
-        }
-        returnString.append("Ebook: ").append(this.ebook);
-
-        return returnString.toString();
-    }
-
-    /**
      * Returns a textual representation of author and title of a Book.
      * If more should be returned, use getAll() or getAllSet()
      *
