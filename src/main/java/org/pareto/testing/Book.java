@@ -240,21 +240,6 @@ public class Book {
     }
 
     /**
-     * Returns a complete textual representation of a Book.
-     *
-     * @return the author and the title of the Book
-     */
-    public String getAll() {
-        return "Author: " + this.author + System.lineSeparator()
-                + "Title: " + this.title + System.lineSeparator()
-                + "Publisher: " + this.publisher + System.lineSeparator()
-                + "Year: " + this.year + System.lineSeparator()
-                + "ISBN: " + this.isbn + System.lineSeparator()
-                + "Price: " + this.price + System.lineSeparator()
-                + "Ebook: " + this.ebook;
-    }
-
-    /**
      * Returns a textual representation of author and title of a Book.
      * If more should be returned, use getAll() or getAllSet()
      *
