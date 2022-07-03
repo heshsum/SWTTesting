@@ -29,5 +29,8 @@ class TestCalculator {
     void div() {
         Assertions.assertThrows(ArithmeticException.class,
                 () -> c.div(42, 0));
+        Assertions.assertEquals(5, c.div(35, 7));
     }
+
+
 }
