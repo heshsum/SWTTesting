@@ -8,7 +8,7 @@ public class Aktie {
     private String symbol;
 
     /** Der Name der Aktie. */
-    private final String NAME;
+    private final String name;
 
     /** Die Anzahl der Aktie. */
     private int anzahl;
@@ -20,8 +20,8 @@ public class Aktie {
      * @param anzahl Die Anzahl der Aktie
      */
     public Aktie(String symbol, String name, int anzahl){
-        this.symbol = symbol;
-        this.NAME = name.toUpperCase();
+        this.symbol = symbol.toUpperCase();
+        this.name = name;
         this.anzahl = anzahl;
     }
 
@@ -62,6 +62,6 @@ public class Aktie {
      * @return Der Name der Aktie als String
      */
     public String getName() {
-        return NAME;
+        return name;
     }
 }

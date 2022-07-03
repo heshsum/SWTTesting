@@ -23,6 +23,10 @@ public class Depot {
         this.ticker = ticker;
     }
 
+    public Ticker getTicker() {
+        return this.ticker;
+    }
+
     public double getDepotwert(){
         double wert = 0.0;
 
