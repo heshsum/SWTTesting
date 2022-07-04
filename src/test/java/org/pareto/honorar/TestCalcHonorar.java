@@ -20,9 +20,7 @@ class TestCalcHonorar {
     void textLeer() {
         String s = null;
         Assertions.assertThrows(IllegalArgumentException.class,
-                () -> {
-                    int honorar = ch.getHonorar(s);
-                });
+                () -> ch.getHonorar(s));
     }
 
     @Test
