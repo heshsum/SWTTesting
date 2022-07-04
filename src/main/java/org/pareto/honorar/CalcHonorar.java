@@ -13,18 +13,19 @@ public class CalcHonorar {
      * oder der Text leer ist
      */
     public int getHonorar(String s) throws IllegalArgumentException {
-        if (s == null || s.length() < 1000) {
+        if (s == null || s.length() < 100) {
             throw new IllegalArgumentException();
         }
-        return s.replaceAll("\\s+", "").length() / 100;
+        return s.replaceAll("\\s+", "").length() / 10;
     }
 
     /**
-     * Method um die Anzahl der Bildelemente zurückzugeben
+     * Methode um die Anzahl der Bildelemente zurückzugeben
      * @param s der Text der auf Bilder überprüft werden soll
      * @return die Anzahl wie oft die Zeichenfolge "Bild" in dem Text vorkommt
      */
     public int countPictures(String s) {
-        return s.split("Bild").length-1;
+        // Da man immer min. 1 Element in dem Array hat, wird 1 abgezogen
+        return s.split("Picture").length-1;
     }
 }

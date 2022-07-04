@@ -17,7 +17,7 @@ class TestCalcHonorar {
     }
 
     @Test
-    void testHonorar() {
+    void textLeer() {
         String s = null;
         Assertions.assertThrows(IllegalArgumentException.class,
                 () -> {
@@ -27,22 +27,27 @@ class TestCalcHonorar {
 
     @Test
     void zuKurzerText() {
-        String s = "Hallo Welt";
+        StringBuilder s = new StringBuilder();
+        String li = "Hallo Welt";
+        s.append(li.repeat(9));
+        System.out.println(s.toString().length());
         Assertions.assertThrows(IllegalArgumentException.class,
-                () -> ch.getHonorar(s));
+                () -> ch.getHonorar(s.toString()));
     }
 
     @Test
     void honorarBerechnung() {
         StringBuilder s = new StringBuilder();
-        String li = "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean m";
+        String li = "Lorem ipsum";
         s.append(li.repeat(10));
-        Assertions.assertEquals(8, ch.getHonorar(s.toString()));
+        Assertions.assertEquals(10, ch.getHonorar(s.toString()));
     }
 
     @Test
     void bildHonorarBerechnung() {
-        String s = "Ein Mann Bild sitzt in seinem Garten Bild.";
-        Assertions.assertEquals(2, ch.countPictures(s));
+        String s1 = "Ein Mann Picture sitzt in seinem Garten Picture.";
+        Assertions.assertEquals(2, ch.countPictures(s1));
+        String s2 = "Ein Mann sitzt in seinem Garten.";
+        Assertions.assertEquals(0, ch.countPictures(s2));
     }
 }

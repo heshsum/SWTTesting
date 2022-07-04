@@ -26,16 +26,16 @@ public class Calculator {
     }
 
     /**
-     * Method to divide to numbers.
+     * Method to divide two integers.
      * @param a the number to divide
      * @param b the divisor
      * @return the results of the division
-     * @throws ArithmeticException if b is zero
+     * @throws IllegalArgumentException if b is zero
      */
-    public int div(int a, int b) throws ArithmeticException {
+    public int div(int a, int b) throws IllegalArgumentException {
         if (b != 0) {
             return a / b;
         }
-        throw new ArithmeticException();
+        throw new IllegalArgumentException();
     }
 }
