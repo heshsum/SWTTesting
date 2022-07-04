@@ -3,6 +3,10 @@ package org.pareto.calculator;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.pareto.mocking.Ticker;
+
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
 
 class TestCalculator {
 
@@ -27,10 +31,15 @@ class TestCalculator {
 
     @Test
     void div() {
-        Assertions.assertThrows(ArithmeticException.class,
+        Assertions.assertThrows(IllegalArgumentException.class,
                 () -> c.div(42, 0));
         Assertions.assertEquals(5, c.div(35, 7));
     }
 
-
+    @Test
+    void mocking() {
+        Calculator mockCalc = mock(Calculator.class);
+        when(mockCalc.div(20, 0)).thenReturn(5);
+        Assertions.assertEquals(5, mockCalc.div(20, 0));
+    }
 }
