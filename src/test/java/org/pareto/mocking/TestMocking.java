@@ -18,7 +18,7 @@ class TestMocking {
     }
 
     @Test
-    void testAdd() {
+    void testAddAktie() {
         d.addAktie(apple);
         Assertions.assertEquals(apple, d.getAktie(0));
     }
@@ -50,22 +50,23 @@ class TestMocking {
     }
 
     @Test
-    void getName() {
+    void name() {
         Assertions.assertEquals("Apple", apple.getName());
+        apple.setName("Pear");
+        Assertions.assertEquals("Pear", apple.getName());
     }
 
     @Test
-    void getSymbol() {
+    void symbol() {
         Assertions.assertEquals("AAPL", apple.getSymbol());
         apple.setSymbol("APPL");
         Assertions.assertEquals("APPL", apple.getSymbol());
     }
 
     @Test
-    void testAnzahl() {
+    void anzahl() {
         Assertions.assertEquals(2, apple.getAnzahl());
         apple.setAnzahl(1);
         Assertions.assertEquals(1, apple.getAnzahl());
     }
-
 }

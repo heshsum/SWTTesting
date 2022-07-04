@@ -8,7 +8,7 @@ public class Aktie {
     private String symbol;
 
     /** Der Name der Aktie. */
-    private final String name;
+    private String name;
 
     /** Die Anzahl der Aktie. */
     private int anzahl;
@@ -64,4 +64,13 @@ public class Aktie {
     public String getName() {
         return name;
     }
+
+    /**
+     * Methode um den Namen einer Aktie zu setzen.
+     * @param name Der Name der Aktie
+     */
+    public void setName(String name) {
+        this.name = name;
+    }
+
 }
