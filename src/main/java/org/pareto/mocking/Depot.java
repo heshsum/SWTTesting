@@ -12,6 +12,11 @@ public class Depot {
     /** Der Aktienticker für das Depot. */
     private Ticker ticker;
 
+    public Depot() {
+        this.ticker = ticker;
+        this.aktien = aktien;
+    }
+
     /**
      * Methode um eine Aktie zu einem Depot hinzuzufügen.
      * @param a die Aktie, die hinzugefügt werden soll
