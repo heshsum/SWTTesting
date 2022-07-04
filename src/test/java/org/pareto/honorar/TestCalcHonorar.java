@@ -30,7 +30,6 @@ class TestCalcHonorar {
         StringBuilder s = new StringBuilder();
         String li = "Hallo Welt";
         s.append(li.repeat(9));
-        System.out.println(s.toString().length());
         Assertions.assertThrows(IllegalArgumentException.class,
                 () -> ch.getHonorar(s.toString()));
     }
