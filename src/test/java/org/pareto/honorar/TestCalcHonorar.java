@@ -27,19 +27,15 @@ class TestCalcHonorar {
 
     @Test
     void zuKurzerText() {
-        StringBuilder s = new StringBuilder();
-        String li = "Hallo Welt";
-        s.append(li.repeat(9));
+        String text = "Hallo Welt".repeat(9);
         Assertions.assertThrows(IllegalArgumentException.class,
-                () -> ch.getHonorar(s.toString()));
+                () -> ch.getHonorar(text));
     }
 
     @Test
     void honorarBerechnung() {
-        StringBuilder s = new StringBuilder();
-        String li = "Lorem ipsum";
-        s.append(li.repeat(10));
-        Assertions.assertEquals(10, ch.getHonorar(s.toString()));
+        String text = "Lorem ipsum".repeat(10);
+        Assertions.assertEquals(10, ch.getHonorar(text));
     }
 
     @Test
