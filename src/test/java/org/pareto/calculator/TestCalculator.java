@@ -3,6 +3,7 @@ package org.pareto.calculator;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.mockito.Mockito;
 import org.pareto.mocking.Ticker;
 
 import static org.mockito.Mockito.mock;
@@ -41,5 +42,11 @@ class TestCalculator {
         Calculator mockCalc = mock(Calculator.class);
         when(mockCalc.div(20, 0)).thenReturn(5);
         Assertions.assertEquals(5, mockCalc.div(20, 0));
+    }
+
+    @Test
+    void spying() {
+        Calculator spyCalc = Mockito.spy(new Calculator());
+        Assertions.assertThrows(IllegalArgumentException.class, () -> spyCalc.div(20,0));
     }
 }
